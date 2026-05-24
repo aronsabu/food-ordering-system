@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Foods</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+
+        <span class="navbar-brand">
+          Food Ordering System |
+          <span id="userName"></span>
+        </span>
+
+        <div>
+
+          <a
+            href="admin.html"
+            id="adminBtn"
+            class="btn btn-outline-light me-2"
+          >
+            Admin
+          </a>
+
+          <a
+            href="foods.html"
+            class="btn btn-light me-2"
+          >
+            Menu
+          </a>
+
+          <a
+            href="cart.html"
+            class="btn btn-outline-light me-2"
+          >
+            Cart
+          </a>
+
+          <a
+            href="orders.html"
+            class="btn btn-outline-light me-2"
+          >
+            Orders
+          </a>
+
+          <button
+            class="btn btn-danger"
+            onclick="logout()"
+          >
+            Logout
+          </button>
+
+        </div>
+
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+
+      <div
+        class="d-flex justify-content-between align-items-center mb-4"
+      >
+
+        <h2>Food Menu</h2>
+
+        <div class="d-flex">
+
+          <input
+            type="text"
+            id="searchInput"
+            class="form-control me-2"
+            placeholder="Search food..."
+          >
+
+          <button
+            class="btn btn-primary me-2"
+            onclick="searchFoods()"
+          >
+            Search
+          </button>
+
+          <button
+            class="btn btn-secondary"
+            onclick="clearSearch()"
+          >
+            Clear
+          </button>
+
+        </div>
+
+      </div>
+
+      <div id="foodContainer" class="row"></div>
+
+    </div>
+
+    <script src="js/foods.js"></script>
+
+  </body>
+</html>
