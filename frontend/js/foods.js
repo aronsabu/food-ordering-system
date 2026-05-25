@@ -40,7 +40,7 @@ async function loadFoods() {
         <div class="card mb-4">
 
           <img
-            src="${food.image}"
+            src="${food.image ? food.image.replace('https://food-ordering-media-aron.s3.ap-south-1.amazonaws.com', 'https://d3ljfqy6fys1vp.cloudfront.net') : ''}"
             class="card-img-top"
             style="
               height:220px;
@@ -167,7 +167,7 @@ async function searchFoods() {
         <div class="card mb-4">
 
           <img
-            src="${food.image}"
+            src="${food.image ? food.image.replace('https://food-ordering-media-aron.s3.ap-south-1.amazonaws.com', 'https://d3ljfqy6fys1vp.cloudfront.net') : ''}"
             class="card-img-top"
             style="
               height:220px;
