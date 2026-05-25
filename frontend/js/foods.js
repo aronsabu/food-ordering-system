@@ -40,7 +40,7 @@ async function loadFoods() {
         <div class="card mb-4">
 
           <img
-            src="http://15.206.116.214:5000/uploads/${food.image}"
+            src="${food.image}"
             class="card-img-top"
             style="
               height:220px;
@@ -167,7 +167,7 @@ async function searchFoods() {
         <div class="card mb-4">
 
           <img
-            src="http://15.206.116.214:5000/uploads/${food.image}"
+            src="${food.image}"
             class="card-img-top"
             style="
               height:220px;
