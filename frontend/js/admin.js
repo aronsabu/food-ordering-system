@@ -13,7 +13,7 @@ async function loadOrders() {
 
   const response =
     await fetch(
-      "http://localhost:5000/api/orders/admin/all",
+      "http://15.206.116.214:5000/api/orders/admin/all",
       {
         headers: {
           Authorization:
@@ -86,7 +86,7 @@ async function updateStatus(
 
   const response =
     await fetch(
-      `http://localhost:5000/api/orders/${id}/status`,
+      `http://15.206.116.214:5000/api/orders/${id}/status`,
       {
         method: "PUT",
 
@@ -180,7 +180,7 @@ async function addFood() {
 
   const response =
     await fetch(
-      "http://localhost:5000/api/foods",
+      "http://15.206.116.214:5000/api/foods",
       {
         method: "POST",
 
@@ -205,7 +205,7 @@ async function loadFoods() {
 
   const response =
     await fetch(
-      "http://localhost:5000/api/foods"
+      "http://15.206.116.214:5000/api/foods"
     );
 
   const foods =
@@ -257,7 +257,7 @@ async function deleteFood(id) {
 
   const response =
     await fetch(
-      `http://localhost:5000/api/foods/${id}`,
+      `http://15.206.116.214:5000/api/foods/${id}`,
       {
         method: "DELETE",
 

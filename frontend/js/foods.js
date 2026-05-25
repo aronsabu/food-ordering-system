@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/foods";
+const API_URL = "http://15.206.116.214:5000/api/foods";
 
 const role =
   localStorage.getItem("role");
@@ -40,7 +40,7 @@ async function loadFoods() {
         <div class="card mb-4">
 
           <img
-            src="http://localhost:5000/uploads/${food.image}"
+            src="http://15.206.116.214:5000/uploads/${food.image}"
             class="card-img-top"
             style="
               height:220px;
@@ -87,7 +87,7 @@ async function addToCart(foodId) {
 
   const response =
     await fetch(
-      "http://localhost:5000/api/cart",
+      "http://15.206.116.214:5000/api/cart",
       {
         method: "POST",
 
@@ -146,7 +146,7 @@ async function searchFoods() {
 
   const response =
     await fetch(
-      `http://localhost:5000/api/foods/search?name=${name}`
+      `http://15.206.116.214:5000/api/foods/search?name=${name}`
     );
 
   const foods =
@@ -167,7 +167,7 @@ async function searchFoods() {
         <div class="card mb-4">
 
           <img
-            src="http://localhost:5000/uploads/${food.image}"
+            src="http://15.206.116.214:5000/uploads/${food.image}"
             class="card-img-top"
             style="
               height:220px;

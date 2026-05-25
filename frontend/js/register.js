@@ -10,7 +10,7 @@ async function registerUser() {
     document.getElementById("password").value;
 
   const response = await fetch(
-    "http://localhost:5000/api/auth/register",
+    "http://15.206.116.214:5000/api/auth/register",
     {
       method: "POST",
 
