@@ -8,7 +8,7 @@ async function loginUser() {
 
   const response =
     await fetch(
-      "http://15.206.116.214:5000/api/auth/login",
+      "/api/auth/login",
       {
         method: "POST",
 

@@ -22,7 +22,7 @@ async function loadOrders() {
 
   const response =
     await fetch(
-      "http://15.206.116.214:5000/api/orders",
+      "/api/orders",
       {
         headers: {
           Authorization:

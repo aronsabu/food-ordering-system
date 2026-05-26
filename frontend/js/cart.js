@@ -22,7 +22,7 @@ async function loadCart() {
 
   const response =
     await fetch(
-      "http://15.206.116.214:5000/api/cart",
+      "/api/cart",
       {
         headers: {
           Authorization:
@@ -81,7 +81,7 @@ async function removeItem(id) {
     localStorage.getItem("token");
 
   await fetch(
-    `http://15.206.116.214:5000/api/cart/${id}`,
+    `/api/cart/${id}`,
     {
       method: "DELETE",
 
@@ -120,7 +120,7 @@ async function placeOrder() {
 
   const response =
     await fetch(
-      "http://15.206.116.214:5000/api/orders",
+      "/api/orders",
       {
         method: "POST",
 

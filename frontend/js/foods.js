@@ -1,4 +1,4 @@
-const API_URL = "http://15.206.116.214:5000/api/foods";
+const API_URL = "/api/foods";
 
 const role =
   localStorage.getItem("role");
@@ -40,7 +40,7 @@ async function loadFoods() {
         <div class="card mb-4">
 
           <img
-            src="${food.image ? food.image.replace('https://food-ordering-media-aron.s3.ap-south-1.amazonaws.com', 'https://d3ljfqy6fys1vp.cloudfront.net') : ''}"
+            src="${food.image}"
             class="card-img-top"
             style="
               height:220px;
@@ -87,7 +87,7 @@ async function addToCart(foodId) {
 
   const response =
     await fetch(
-      "http://15.206.116.214:5000/api/cart",
+      "/api/cart",
       {
         method: "POST",
 
@@ -146,7 +146,7 @@ async function searchFoods() {
 
   const response =
     await fetch(
-      `http://15.206.116.214:5000/api/foods/search?name=${name}`
+      `/api/foods/search?name=${name}`
     );
 
   const foods =
@@ -167,7 +167,7 @@ async function searchFoods() {
         <div class="card mb-4">
 
           <img
-            src="${food.image ? food.image.replace('https://food-ordering-media-aron.s3.ap-south-1.amazonaws.com', 'https://d3ljfqy6fys1vp.cloudfront.net') : ''}"
+            src="${food.image}"
             class="card-img-top"
             style="
               height:220px;
