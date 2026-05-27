@@ -14,6 +14,7 @@ const cartRoutes = require("./routes/cartRoutes");
 const orderRoutes = require("./routes/orderRoutes");
 
 const app = express();
+app.set("trust proxy", 2);
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
@@ -35,6 +36,8 @@ app.use(
   "/uploads",
   express.static("uploads")
 );
+
+console.log("CI/CD TEST DEPLOYMENT");
 
 // Auth Routes
 app.use("/api/auth", authRoutes);
