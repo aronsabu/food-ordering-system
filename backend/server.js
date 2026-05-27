@@ -37,7 +37,7 @@ app.use(
   express.static("uploads")
 );
 
-console.log("CI/CD TEST DEPLOYMENT");
+
 
 // Auth Routes
 app.use("/api/auth", authRoutes);
