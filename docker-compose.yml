@@ -1,8 +1,7 @@
-version: '3'
-
 services:
   backend:
     build: ./backend
+
     container_name: foodapp-backend
 
     ports:
