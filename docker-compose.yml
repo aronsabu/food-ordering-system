@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  backend:
+    build: ./backend
+    container_name: foodapp-backend
+
+    ports:
+      - "5000:5000"
+
+    env_file:
+      - ./backend/.env
+
+    restart: always

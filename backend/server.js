@@ -18,7 +18,7 @@ app.set("trust proxy", 2);
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  max: 100,
+  max: 500,
   message: {
     message: "Too many requests. Please try again later."
   }
@@ -26,7 +26,26 @@ const limiter = rateLimit({
 
 app.use(
   helmet({
-    crossOriginResourcePolicy: false
+    crossOriginResourcePolicy: false,
+
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", "'unsafe-inline'"],
+        styleSrc: ["'self'", "'unsafe-inline'"],
+        imgSrc: ["'self'", "data:", "https:"]
+      }
+    },
+
+    frameguard: {
+      action: "deny"
+    },
+
+    noSniff: true,
+
+    referrerPolicy: {
+      policy: "no-referrer"
+    }
   })
 );
 app.use(cors());
@@ -50,6 +69,12 @@ app.get("/", (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
+
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    status: "healthy"
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
