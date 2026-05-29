@@ -162,7 +162,7 @@ Create a `.env` file inside the backend directory:
 ```env
 PORT=5000
 
-DB_HOST=your-rds-endpoint
+DB_HOST=fooddb.criom84eo1rx.ap-south-1.rds.amazonaws.com
 DB_USER=admin
 DB_PASSWORD=888888888888
 DB_NAME=foodordering
